@@ -1,0 +1,134 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.todo-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.3em;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #ff6f61;
+}
+
+.date-picker {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.date-picker input {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1.1em;
+  width: 100%;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  background: #fff5f5;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 1.1em;
+}
+
+.task.completed {
+  background: #d4ffd4;
+  transform: scale(1.02);
+}
+
+.checkbox {
+  width: 26px;
+  height: 26px;
+  border: 2px solid #555;
+  border-radius: 6px;
+  margin-right: 12px;
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.checkbox::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 1px;
+  width: 8px;
+  height: 16px;
+  border: solid #28a745;
+  border-width: 0 3px 3px 0;
+  opacity: 0;
+  transform: rotate(45deg) scale(0.5);
+  transition: all 0.3s ease;
+}
+
+.checkbox.checked::after {
+  opacity: 1;
+  transform: rotate(45deg) scale(1);
+}
+
+.input-row {
+  display: flex;
+  margin-bottom: 12px;
+  gap: 8px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 12px;
+  font-size: 1.1em;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+}
+
+button {
+  padding: 12px 18px;
+  border: none;
+  background: #ff6f61;
+  color: white;
+  font-size: 1.1em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #e65b50;
+}
+
+/* Congratulations message */
+.congrats {
+  text-align: center;
+  padding: 15px;
+  margin-top: 15px;
+  background: #fff0d4;
+  border-radius: 12px;
+  display: none;
+}
+
+.congrats h2 {
+  font-size: 1.4em;
+  color: #28a745;
+}
+
+.congrats p {
+  font-family: 'Handlee', cursive;
+  font-size: 1.2em;
+  color: #555;
+}

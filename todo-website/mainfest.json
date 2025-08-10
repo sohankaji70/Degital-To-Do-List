@@ -1,0 +1,9 @@
+{
+    "name": "To-Do List",
+    "short_name": "ToDo",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#f9f7f7",
+    "theme_color": "#3f72af",
+    "icons": []
+}
